@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<style>
+    /* Custom Styles */
+    .container {
+        max-width: 1100px;
+    }
+
+    .map-container iframe {
+        border: 0;
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Background */
+    body {
+        background: none;
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(https://i.pinimg.com/736x/12/cd/b6/12cdb66b40c6132edd159dda4c855f91.jpg) no-repeat center center / cover;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    /* Navbar Styles */
+    .navbar-brand {
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        padding: 5px 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        padding: 3px 6px;
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-link {
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: blue;
+    }
+
+    /* Button Hover Effect */
+    .btn-primary {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #007bff;
+        transform: scale(1.05);
+    }
+
+    /* Form Inputs */
+    .form-control {
+        background-color: #1a1a1a;
+        border: 1px solid #444;
+        color: #fff;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    }
+
+    .form-label {
+        color: #bbb;
+    }
+
+    .text-white {
+        color: #f8f9fa;
+    }
+
+    .fw-bold {
+        font-weight: 700;
+    }
+
+    /* Map Container */
+    .map-container {
+        margin-top: 20px;
+    }
+</style>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="
+    background: rgba(58, 54, 54, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(58, 54, 54, 0.42);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AYK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5 text-white mt-5">
+        <h1 class="text-center fw-bold mb-4">Contact Me</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Contact Form -->
+                <h3 class="fw-bold">Get in Touch</h3>
+                <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <!-- Social Media Links -->
+                <h3 class="fw-bold">Connect with Me</h3>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/arslan_younis_khan"
+                        class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="WhatsApp">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+                <!-- Phone Number -->
+                <p class="mt-3"><i class="bx bx-phone"></i> +92 341 3455547</p>
+
+                <!-- Google Map Embed -->
+                <h3 class="fw-bold">My Location</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.316561072629!2d-74.00601558455744!3d40.7127763793307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQyJzM4LjAiTiA3NMKwMDAnMjIuMyJX!5e0!3m2!1sen!2sus!4v1638354259505!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <!-- Contact Information -->
+        <p class="mb-2"><i class="bx bx-phone"></i> +92 341 3455547</p>
+
+        <!-- Social Media Icons -->
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com/arslan_younis_khan" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="Instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="WhatsApp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="GitHub">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Additional Footer Information -->
+        <div class="mb-3">
+            <p>&copy; 2024 Arslan Younis. All rights reserved.</p>
+            <a href="privacy-policy.html" class="text-white">Privacy Policy</a> |
+            <a href="terms-of-service.html" class="text-white">Terms of Service</a>
+        </div>
+
+        <!-- Optional: Footer Credits (Optional) -->
+        <div class="mb-3">
+            <p>Website Designed by <a href="https://yourportfolio.com" class="text-white">Arslan Younis</a></p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

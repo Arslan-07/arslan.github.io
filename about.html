@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    img:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #007bff;
+        color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+    }
+
+    /* backgrond  */
+    body {
+        background: none;
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(https://i.pinimg.com/736x/12/cd/b6/12cdb66b40c6132edd159dda4c855f91.jpg) no-repeat center center / cover;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    /* Navbar Styles */
+    .navbar-brand {
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        padding: 5px 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        padding: 3px 6px;
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-link {
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: blue;
+    }
+</style>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="
+    background: rgba(58, 54, 54, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(58, 54, 54, 0.42);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AYK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- About Section -->
+    <section class="container  text-white">
+        <h1 class="text-center fw-bold mb-4">About Me</h1>
+        <div class="row align-items-center">
+            <!-- Content Section -->
+            <div class="col-md-6">
+                <p>Hello! I'm <strong>Arslan Younis</strong>, a passionate Frontend Developer with a knack for creating
+                    visually appealing, user-friendly websites. My goal is to transform ideas into functional designs
+                    that engage users and deliver excellent user experiences.</p>
+                <p>With expertise in <strong>HTML, CSS, JavaScript, and React</strong>, I specialize in building
+                    responsive, modern, and accessible web applications.</p>
+                <a href="#" class="btn btn-primary px-4 py-2">Download CV</a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-md-6 text-center">
+                <img src="img.jpg" class="img-fluid rounded shadow w-75" style="margin-top: 10px; margin-bottom: 10px;"
+                    alt="Arslan Younis - Frontend Developer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container py-3 text-white">
+        <h2 class="text-center fw-bold mb-4">My Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>HTML/CSS</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>JavaScript</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>React</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Bootstrap</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <!-- Contact Information -->
+        <p class="mb-2"><i class="bx bx-phone"></i> +92 341 3455547</p>
+
+        <!-- Social Media Icons -->
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com/arslan_younis_khan" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="Instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="WhatsApp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                data-bs-toggle="tooltip" title="GitHub">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Additional Footer Information -->
+        <div class="mb-3">
+            <p>&copy; 2024 Arslan Younis. All rights reserved.</p>
+            <a href="privacy-policy.html" class="text-white">Privacy Policy</a> |
+            <a href="terms-of-service.html" class="text-white">Terms of Service</a>
+        </div>
+
+        <!-- Optional: Footer Credits (Optional) -->
+        <div class="mb-3">
+            <p>Website Designed by <a href="https://yourportfolio.com" class="text-white">Arslan Younis</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

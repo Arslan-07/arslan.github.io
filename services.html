@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<style>
+    /* Custom Styles */
+    .container {
+        max-width: 1200px;
+    }
+
+    .card {
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+        padding: 30px;
+    }
+
+    .service-icon {
+        font-size: 3rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .service-description {
+        font-size: 1rem;
+    }
+
+    /* Background */
+    body {
+        background: none;
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(https://i.pinimg.com/736x/12/cd/b6/12cdb66b40c6132edd159dda4c855f91.jpg) no-repeat center center / cover;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    /* Navbar Styles */
+    .navbar-brand {
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        padding: 5px 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        padding: 3px 6px;
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-link {
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: blue;
+    }
+</style>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(58, 54, 54, 0.32); border-radius: 16px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(8.2px); -webkit-backdrop-filter: blur(8.2px); border: 1px solid rgba(58, 54, 54, 0.42);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AYK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="container py-5 mt-5" id="services">
+        <h1 class="text-center fw-bold mb-4">My Services</h1>
+        <div class="row text-center">
+            <!-- Service 1 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-code-alt service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">Web Development</h5>
+                        <p class="card-text service-description">I create responsive, modern, and user-friendly websites tailored to your needs using the latest technologies like HTML, CSS, JavaScript, and React.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bxs-paint service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">UI/UX Design</h5>
+                        <p class="card-text service-description">Designing visually stunning and intuitive interfaces to enhance the user experience and ensure usability across all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-mobile-alt service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">Responsive Design</h5>
+                        <p class="card-text service-description">Ensuring your website looks and performs beautifully across all screen sizes, from mobile devices to desktops.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-cog service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">Website Optimization</h5>
+                        <p class="card-text service-description">Optimizing your website’s speed and performance by minimizing load times, ensuring fast, smooth user experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 5 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-search-alt service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">SEO Services</h5>
+                        <p class="card-text service-description">Implementing effective SEO strategies to increase your website’s visibility on search engines and drive more organic traffic.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-podcast service-icon text-primary mb-3"></i>
+                        <h5 class="card-title service-title">Web Maintenance</h5>
+                        <p class="card-text service-description">Providing ongoing website maintenance services to ensure your website is up-to-date, secure, and performing at its best.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <!-- Contact Information -->
+        <p class="mb-2"><i class="bx bx-phone"></i> +92 341 3455547</p>
+
+        <!-- Social Media Icons -->
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com/arslan_younis_khan" class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="Instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="WhatsApp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="GitHub">
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Additional Footer Information -->
+        <div class="mb-3">
+            <p>&copy; 2024 Arslan Younis. All rights reserved.</p>
+            <a href="privacy-policy.html" class="text-white">Privacy Policy</a> |
+            <a href="terms-of-service.html" class="text-white">Terms of Service</a>
+        </div>
+
+        <!-- Optional: Footer Credits -->
+        <div class="mb-3">
+            <p>Website Designed by <a href="https://yourportfolio.com" class="text-white">Arslan Younis</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

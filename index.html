@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: none;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://i.pinimg.com/736x/12/cd/b6/12cdb66b40c6132edd159dda4c855f91.jpg) no-repeat center center / cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        h1,
+        h2,
+        p {
+            line-height: 1.5;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: rgba(58, 54, 54, 0.32);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8.2px);
+            -webkit-backdrop-filter: blur(8.2px);
+            border: 1px solid rgba(58, 54, 54, 0.42);
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: blue;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            animation: pulse 2s infinite;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Image Styles */
+        img {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Progress Bar Styles */
+        .progress {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            background-color: #007bff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer .btn-outline-primary {
+            font-size: 1.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        footer .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .col-md-6 {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AYK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center text-white py-5" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
+                    <p class="lead mt-3">Hi, I'm <strong>Arslan Younis</strong>, a passionate Frontend Developer
+                        creating visually appealing and user-friendly websites.</p>
+                    <div class="mt-4">
+                        <a href="#about" class="btn btn-primary px-4 py-2">Learn More</a>
+                        <a href="#contact" class="btn btn-outline-primary px-4 py-2 ms-2">Contact Me</a>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="col-md-6 text-center">
+                    <img src="img.jpg" alt="Hero Image" class="img-fluid rounded shadow-lg w-75"
+                        style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="custom-hr">
+
+    <!-- About Section -->
+    <section class="container text-white py-5">
+        <h1 class="text-center fw-bold mb-4">About Me</h1>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>Hello! I'm <strong>Arslan Younis</strong>, a passionate Frontend Developer with a knack for creating
+                    visually appealing, user-friendly websites. My goal is to transform ideas into functional designs
+                    that engage users and deliver excellent user experiences.</p>
+                <p>With expertise in <strong>HTML, CSS, JavaScript, and React</strong>, I specialize in building
+                    responsive, modern, and accessible web applications.</p>
+                <a href="img.jpg" class="btn btn-primary px-4 py-2">Download CV</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img.jpg" class="img-fluid rounded shadow w-75" alt="Arslan Younis - Frontend Developer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container py-3 text-white">
+        <h2 class="text-center fw-bold mb-4">My Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>HTML/CSS</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>JavaScript</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>React</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Bootstrap</p>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;">85%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="custom-hr">
+
+    <!-- Services Section -->
+    <section id="services" class="container py-5 mt-5 text-white">
+        <h2 class="text-center fw-bold mb-4">My Services</h2>
+        <div class="row text-center">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-code-alt service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">Web Development</h5>
+                        <p class="card-text service-description">I create responsive, modern, and user-friendly websites
+                            tailored to your needs using the latest technologies like HTML, CSS, JavaScript, and React.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bxs-paint service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">UI/UX Design</h5>
+                        <p class="card-text service-description">Designing visually stunning and intuitive interfaces to
+                            enhance the user experience and ensure usability across all devices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-mobile-alt service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">Responsive Design</h5>
+                        <p class="card-text service-description">Ensuring your website looks and performs beautifully
+                            across all screen sizes, from mobile devices to desktops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-cog service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">Website Optimization</h5>
+                        <p class="card-text service-description">Optimizing your website’s speed and performance by
+                            minimizing load times, ensuring fast, smooth user experiences.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-search-alt service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">SEO Services</h5>
+                        <p class="card-text service-description">Implementing effective SEO strategies to increase your
+                            website’s visibility on search engines and drive more organic traffic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="card-body">
+                        <i class="bx bx-podcast service-icon text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="card-title service-title fw-bold">Web Maintenance</h5>
+                        <p class="card-text service-description">Providing ongoing website maintenance services to
+                            ensure your website is up-to-date, secure, and performing at its best.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="custom-hr">
+
+    <!-- Portfolio Section -->
+    <section class="container py-5 text-white mt-3" id="portfolio">
+        <h1 class="text-center fw-bold mb-4">My Portfolio</h1>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="https://mlpma8bvuhmo.i.optimole.com/w:auto/h:auto/q:mauto/ig:avif/https://xactmind.com/wp-content/uploads/2024/02/xactmind_logo_mockup.jpg"
+                        class="card-img-top" alt="Xact Mind" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Xact Mind</h5>
+                        <p class="card-text">Xact Mind project.</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB1mINWGheDgvyI3sV-UAXOgX__B3CPm3QSg&s"
+                        class="card-img-top" alt="Logicexer" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Logicexer</h5>
+                        <p class="card-text">Logicexer project</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_640.jpg" class="card-img-top"
+                        alt="A Natural Pictures" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Natural Pictures</h5>
+                        <p class="card-text">Natural Pictures project.</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="data:image/png;base64,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"
+                        class="card-img-top" alt="Pinterest" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Pinterest</h5>
+                        <p class="card-text">Pinterest project</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="https://scontent.fisb3-3.fna.fbcdn.net/v/t39.30808-6/309910435_1124761311465804_816401331168127029_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHpx3d93wn5jm9LM79K-4pkVwrMDHjHywdXCswMeMfLBxbh1zikaRZ6zNTcHvMO1f8xupuEI7CQkIaPanIA3gQl&_nc_ohc=HeuuwYJsN28Q7kNvgHwbr47&_nc_zt=23&_nc_ht=scontent.fisb3-3.fna&_nc_gid=AA3gW_hRHLYHlzzYxy7_x42&oh=00_AYBPeML-rYclVvpEoJXa-DCO7RnKRwPpSs6OeXTfCb6APg&oe=67511E4D"
+                        class="card-img-top" alt="My Portfolio" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">My Portfolio</h5>
+                        <p class="card-text">My portfolio project</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-0 shadow">
+                    <img src="https://admission.com.pk/wp-content/uploads/2020/04/268560_6754026_updates.jpg"
+                        class="card-img-top" alt="University of Kotli AJ&K" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">University of Kotli AJ&K</h5>
+                        <p class="card-text">University of Kotli AJ&K.</p>
+                        <a href="https://example.com" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="custom-hr">
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5 text-white mt-5">
+        <h2 class="text-center fw-bold mb-4">Contact Me</h2>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h3 class="fw-bold">Get in Touch</h3>
+                <form action="mailto:arslansardar472@gmail.com" method="POST" enctype="text/plain">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required
+                            placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required
+                            placeholder="Enter your email address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required
+                            placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-md-6">
+                <h3 class="fw-bold">Connect with Me</h3>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arslan_younis_khan"
+                        class="btn btn-outline-primary rounded-circle" data-bs-toggle="tooltip" title="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/+923413455547" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="WhatsApp">
+                        <i class="bx bxl-whatsapp"></i>
+                    </a>
+                    <a href="https://github.com/ArslanYounis" class="btn btn-outline-primary rounded-circle"
+                        data-bs-toggle="tooltip" title="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                </div>
+
+                <!-- Contact Information -->
+                <p class="mt-5">
+                    <i class="bx bx-phone"></i> <strong>+92 341 3455547</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p><i class="bx bx-phone"></i> +92 341 3455547</p>
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <a href="https://www.facebook.com/ArslanYouniskhan" class="btn btn-outline-primary" data-bs-toggle="tooltip"
+                title="Facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/arslan_younis_khan" class="btn btn-outline-primary"
+                data-bs-toggle="tooltip" title="Instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://wa.me/+923413455547" class="btn btn-outline-primary" data-bs-toggle="tooltip"
+                title="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://github" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="GitHub"><i
+                    class="bx bxl-github"></i></a>
+        </div>
+        <p>&copy; 2024 Arslan Younis. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
